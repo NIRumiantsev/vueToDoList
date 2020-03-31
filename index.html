@@ -12,7 +12,7 @@
         <label for="input" >Create a new note</label>
         <input type="text" class="input" id="input" placeholder="Type a note title" v-model="newNote.noteTitle">
         <button class="button" @click="addNote">Create</button>
-        <note @add_todo="addTodo" @delete_note="deleteNote(index)" v-bind:notes="notes" v-bind:todos="todos"></note>
+        <note @add_todo="addTodo" @delete_note="deleteNote(index)" v-bind:notes="notes" v-bind:todos="todos" v-bind:todos="newTodo"></note>
     </div>
     <script src="src/script.js"></script>
 </body>

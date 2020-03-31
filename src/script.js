@@ -5,9 +5,6 @@ const config = {
         newNote: {
             noteTitle: ''
         },
-        newTodo: {
-            toDoText: ''
-        },
         notes: [
             {
                 noteTitle: 'sdsdsd'
@@ -40,7 +37,7 @@ const config = {
             },
 
             addTodo() {
-                this.notes.push(this.newTodo);
+                this.todos.push(this.newTodo);
             }
 
         }

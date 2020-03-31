@@ -10,7 +10,7 @@ Vue.component('todo',{
             <li class="todo note__todo" v-for="todo in todos">
                 <input type="checkbox" class="checkbox note__checkbox">
                 <h2 class="text text--note_title">{{ todo.toDoText }}</h2>
-                <img src="images/close.png" alt="Delete this note" @click="deleteNote()">
+                <img src="images/close.png" alt="Delete this note" @click="deleteNote()" width="10px">
             </li>
         </ul>
        `
