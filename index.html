@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="src/components/note.js"></script>
+    <script src="src/components/todo.js"></script>
+</head>
+<body>
+    <div class="app" id="app">
+        <label for="input" >Create a new note</label>
+        <input type="text" class="input" id="input" placeholder="Type a note title" v-model="newNote.noteTitle">
+        <button class="button" @click="addNote">Create</button>
+        <note @add_todo="addTodo" @delete_note="deleteNote(index)" v-bind:notes="notes" v-bind:todos="todos"></note>
+    </div>
+    <script src="src/script.js"></script>
+</body>
+</html>
