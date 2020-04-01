@@ -13,14 +13,6 @@ const config = {
                 noteTitle: 'sdsdsd'
             }
         ],
-        todos: [
-            {
-                toDoText: 'ssssss'
-            },
-            {
-                toDoText: 'saaaaas'
-            }
-        ]
     },
         methods: {
 
@@ -29,16 +21,10 @@ const config = {
             },
 
             addNote(){
-                this.notes.push(this.newNote);
+                let note = { noteTitle: this.newNote.noteTitle};
+                this.notes.push(note);
+                this.newNote.noteTitle = '';
             },
-
-            deleteTodo() {
-                this.todos.splice(index, 1);
-            },
-
-            addTodo() {
-                this.todos.push(this.newTodo);
-            }
 
         }
 };
