@@ -23,16 +23,22 @@ Vue.component('todo',{
                 let todo = { toDoText: this.newTodo.toDoText};
                 this.todos.push(todo);
                 this.newTodo.toDoText = '';
+            },
+            checkCheckbox() {
+                
             }
+
         },
         template: `
         <ul class="note__list">
-            <input type="text" placeholder="Add todo" class="input todo__input" v-model="newTodo.toDoText">
-            <button class="button" @click="addTodo">Create</button>
-            <li class="todo note__todo" v-for="todo in todos">
-                <input type="checkbox" class="checkbox note__checkbox">
-                <h2 class="text text--note_title">{{ todo.toDoText }}</h2>
-                <img src="images/close.png" alt="Delete this note" @click="deleteTodo(todos.indexOf(todo))" width="10px">
+            <div class="note__form">
+                <input type="text" placeholder="Add todo" class="input" v-model="newTodo.toDoText">
+                <button class="button button--todo" @click="addTodo">Add</button>
+            </div>
+            <li class="todo" v-for="todo in todos">
+                <input type="checkbox">
+                <h3>{{ todo.toDoText }}</h3> 
+                <img src="images/close.png" alt="Delete this note" @click="deleteTodo(todos.indexOf(todo))" class="image--delete_note">
             </li>
         </ul>
        `

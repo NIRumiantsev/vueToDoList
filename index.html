@@ -6,13 +6,16 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="src/components/note.js"></script>
     <script src="src/components/todo.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="app" id="app">
-        <label for="input" >Create a new note</label>
-        <input type="text" class="input" id="input" placeholder="Type a note title" v-model="newNote.noteTitle">
-        <button class="button" @click="addNote">Create</button>
-        <note @delete_note="deleteNote(index)" v-bind:notes="notes"></note>
+        <h1 class="text text--title">To do app</h1>
+        <div class="app__form">
+            <input type="text" class="input" id="input" placeholder="Type a new note" v-model="newNote.noteTitle">
+            <button class="button" @click="addNote">Create</button>
+        </div>
+        <note @delete_note="deleteNote" v-bind:notes="notes"></note>
     </div>
     <script src="src/script.js"></script>
 </body>

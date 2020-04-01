@@ -1,0 +1,21 @@
+.app {
+    width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app__form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.app__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+}

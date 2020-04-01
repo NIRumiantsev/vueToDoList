@@ -1,0 +1,27 @@
+.note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #bee5eb;
+    padding: 20px;
+}
+
+.note__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.note__list {
+    padding: 0;
+    width: 100%;
+}
+
+.note__form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,24 @@
+.button {
+    padding: 7px 10px;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    background-color: #0074D9;
+    border-radius: 3px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #11518a;
+}
+
+.button--todo {
+    background-color: #0c5460;
+}
+
+.button--todo:hover {
+    background-color: #0a3840;
+}
