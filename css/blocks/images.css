@@ -4,3 +4,7 @@
     margin: 10px;
     cursor: pointer;
 }
+
+.image--disabled {
+    display: none;
+}

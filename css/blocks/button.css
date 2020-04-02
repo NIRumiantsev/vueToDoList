@@ -22,3 +22,15 @@
 .button--todo:hover {
     background-color: #0a3840;
 }
+
+.button--edit {
+    background-color: #0c5460;
+}
+
+.button--edit:hover {
+    background-color: #0a3840;
+}
+
+.button--disabled{
+    display: none;
+}

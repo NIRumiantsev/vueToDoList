@@ -1,14 +1,7 @@
 Vue.component('todo',{
         data() {
           return {
-              todos: [
-                  {
-                      toDoText: 'ssssss'
-                  },
-                  {
-                      toDoText: 'saaaaas'
-                  }
-              ],
+              todos: [],
               newTodo: {
                   toDoText: ''
               }
@@ -24,21 +17,22 @@ Vue.component('todo',{
                 this.todos.push(todo);
                 this.newTodo.toDoText = '';
             },
-            checkCheckbox() {
-                
-            }
-
+            addCheckbox() {
+                let checkboxes = document.getElementsByClassName('checkbox');
+                for (let checkbox of checkboxes) {
+                    checkbox.classList.remove('checkbox--disabled');
+                }
+            },
         },
         template: `
         <ul class="note__list">
             <div class="note__form">
-                <input type="text" placeholder="Add todo" class="input" v-model="newTodo.toDoText">
-                <button class="button button--todo" @click="addTodo">Add</button>
+                <input type="text" placeholder="Add todo" class="input note__input input--disabled" v-model="newTodo.toDoText">
+                <button class="button button--todo button--disabled" @mouseup="addTodo"  @click="addCheckbox">Add</button>
             </div>
             <li class="todo" v-for="todo in todos">
-                <input type="checkbox">
-                <h3>{{ todo.toDoText }}</h3> 
-                <img src="images/close.png" alt="Delete this note" @click="deleteTodo(todos.indexOf(todo))" class="image--delete_note">
+                <input type="checkbox" class="checkbox checkbox--disabled">
+                <h3 class="text text--todo">{{ todo.toDoText }}</h3> 
             </li>
         </ul>
        `

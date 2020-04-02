@@ -14,6 +14,7 @@
         <div class="app__form">
             <input type="text" class="input" id="input" placeholder="Type a new note" v-model="newNote.noteTitle">
             <button class="button" @click="addNote">Create</button>
+            <button class="button button--edit" @click="displayEditOptions"> Edit </button>
         </div>
         <note @delete_note="deleteNote" v-bind:notes="notes"></note>
     </div>

@@ -1,6 +1,4 @@
 .checkbox {
-    opacity: 0;
-    position: absolute;
     display: block;
 }
 
@@ -41,4 +39,8 @@
 .checkbox:checked + label:after{
     opacity: 1;
     transform: scale(1) rotate(-45deg);
+}
+
+.checkbox--disabled {
+    display: none;
 }

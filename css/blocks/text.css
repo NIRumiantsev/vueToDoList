@@ -1,6 +1,6 @@
 .text {
     font-family: Roboto, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .text--title {
@@ -9,7 +9,11 @@
 }
 
 .text--note_title {
-    font-size: 18px;
+    font-size: 20px;
     margin: 10px 0;
+}
+
+.checkbox:checked + .text--todo {
+    text-decoration: line-through;
 }
 
