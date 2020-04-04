@@ -1,29 +1,35 @@
 
 const config = {
     el: '#app',
-    data: {
-        newNote: {
-            noteTitle: ''
-        },
-        notes: [
-            {
-                noteTitle: 'sdsdsd'
-            },
-            {
-                noteTitle: 'sdsdsd'
+    data() {
+        if (Array.isArray(JSON.parse(localStorage.getItem("notes")))) {
+            return {
+                notes: JSON.parse(localStorage.getItem("notes")),
+                newNote: {
+                    noteTitle: ''
+                }
             }
-        ],
+        } else {
+            return {
+                notes: [],
+                newNote: {
+                    noteTitle: ''
+                }
+            }
+        }
     },
         methods: {
 
             deleteNote(index) {
                 this.notes.splice(index, 1);
+                localStorage.setItem("notes", JSON.stringify(this.notes));
             },
 
             addNote(){
                 let note = { noteTitle: this.newNote.noteTitle};
                 this.notes.push(note);
                 this.newNote.noteTitle = '';
+                localStorage.setItem("notes", JSON.stringify(this.notes));
             },
             displayEditOptions() {
                 let checkboxes = document.getElementsByClassName('checkbox');

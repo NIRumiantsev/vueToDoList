@@ -16,7 +16,7 @@ Vue.component('note',{
                 </div>
             </div>
             <div class="note__list">
-                <todo></todo>
+                <todo v-bind:index="notes.indexOf(note)"></todo>
             </div>
         </li>
     </ul>
